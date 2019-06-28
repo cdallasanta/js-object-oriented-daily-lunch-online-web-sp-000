@@ -22,8 +22,7 @@ class Neighborhood {
 
   customers() {
     return this.deliveries().reduce(function(arr, d){
-      debugger;
-      if (!arr.inclu) {
+      if (!arr.includes(d.customer())) {
         arr.push(d.customer());
       }
       return arr;
