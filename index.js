@@ -36,6 +36,12 @@ class Meal {
 
     store.meals.push(this);
   };
+
+  deliveries() {
+    return store.deliveries.filter(function(d){
+      return d.mealId == this.id;
+    }.bind(this));
+  };
 }
 
 class Customer {
