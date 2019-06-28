@@ -22,10 +22,10 @@ class Neighborhood {
 
   customers() {
     return deliveries.reduce(function(arr, d){
-      arr.push d.customer();
+      arr.push(d.customer());
       return arr;
-    }, [])
-  }
+    }, []);
+  };
 }
 
 class Meal {
