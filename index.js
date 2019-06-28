@@ -7,19 +7,19 @@ let customerId = 0;
 let deliveryId = 0;
 
 class Neighborhood {
-  // constructor(name){
-  //   this.id = ++neighborhoodId;
-  //   this.name = name;
-  //
-  //   store.neighborhoods.push(this);
-  // };
-  //
-  // deliveries() {
-  //   return store.deliveries.filter(function(d){
-  //     return d.neighborhoodId == this.id;
-  //   }.bind(this));
-  // };
-  //
+  constructor(name){
+    this.id = ++neighborhoodId;
+    this.name = name;
+
+    store.neighborhoods.push(this);
+  };
+
+  deliveries() {
+    return store.deliveries.filter(function(d){
+      return d.neighborhoodId == this.id;
+    }.bind(this));
+  };
+
   // customers() {
   //   return deliveries.reduce(function(arr, d){
   //     arr.push d.customer();
