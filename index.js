@@ -49,7 +49,7 @@ class Customer {
 
   deliveries() {
     return store.deliveries.filter(function(d){
-      return d.neighborhoodId == this.id;
+      return d.customerId == this.id;
     }.bind(this));
   };
 }
