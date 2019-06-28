@@ -21,7 +21,7 @@ class Neighborhood {
   };
 
   customers() {
-    return deliveries.reduce(function(arr, d){
+    return deliveries().reduce(function(arr, d){
       arr.push(d.customer());
       return arr;
     }, []);
