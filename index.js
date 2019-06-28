@@ -46,6 +46,12 @@ class Customer {
 
     store.customers.push(this);
   };
+
+  deliveries() {
+    return store.deliveries.filter(function(d){
+      return d.neighborhoodId == this.id;
+    }.bind(this));
+  };
 }
 
 class Delivery {
