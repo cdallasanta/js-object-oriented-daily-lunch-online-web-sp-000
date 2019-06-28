@@ -44,6 +44,15 @@ class Meal {
       return d.mealId == this.id;
     }.bind(this));
   };
+
+  customers() {
+    return this.deliveries().reduce(function(arr, d){
+      if (!arr.includes(d.customer())) {
+        arr.push(d.customer());
+      }
+      return arr;
+    }, []);
+  };
 }
 
 class Customer {
