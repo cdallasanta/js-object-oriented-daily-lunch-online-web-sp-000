@@ -63,9 +63,7 @@ class Customer {
 
   meals() {
     return this.deliveries().reduce(function(arr, d){
-      if (!arr.includes(d.meal())) {
-        arr.push(d.meal());
-      }
+      arr.push(d.meal());
       return arr;
     }, []);
   };
