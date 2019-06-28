@@ -28,6 +28,15 @@ class Neighborhood {
       return arr;
     }, []);
   };
+
+  meals() {
+    return this.deliveries().reduce(function(arr, d){
+      if (!arr.includes(d.meal())) {
+        arr.push(d.meal());
+      }
+      return arr;
+    }, []);
+  };
 }
 
 class Meal {
