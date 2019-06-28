@@ -49,30 +49,30 @@ class Customer {
 }
 
 class Delivery {
-  // constructor(meal, neighborhood, customer){
-  //   this.id = ++deliveryId;
-  //   this.mealId = meal;
-  //   this.neighborhoodId = neighborhood;
-  //   this.customerId = customer;
-  //
-  //   store.deliveries.push(this);
-  // };
-  //
-  // meal() {
-  //   return store.meals.find(function(m){
-  //     return m.id ===this.mealId;
-  //   }.bind(this));
-  // };
-  //
-  // neighborhood() {
-  //   return store.neighborhoods.find(function(n){
-  //     return n.id === this.neighborhoodId;
-  //   }.bind(this));
-  // };
-  //
-  // customer() {
-  //   return store.customers.find(function(c){
-  //     return c.id === this.customerId;
-  //   }.bind(this));
-  // };
+  constructor(meal, neighborhood, customer){
+    this.id = ++deliveryId;
+    this.mealId = meal;
+    this.neighborhoodId = neighborhood;
+    this.customerId = customer;
+
+    store.deliveries.push(this);
+  };
+
+  meal() {
+    return store.meals.find(function(m){
+      return m.id ===this.mealId;
+    }.bind(this));
+  };
+
+  neighborhood() {
+    return store.neighborhoods.find(function(n){
+      return n.id === this.neighborhoodId;
+    }.bind(this));
+  };
+
+  customer() {
+    return store.customers.find(function(c){
+      return c.id === this.customerId;
+    }.bind(this));
+  };
 }
