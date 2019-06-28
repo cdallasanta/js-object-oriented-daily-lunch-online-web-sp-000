@@ -20,12 +20,12 @@ class Neighborhood {
     }.bind(this));
   };
 
-  // customers() {
-  //   return deliveries.reduce(function(arr, d){
-  //     arr.push d.customer();
-  //     return arr;
-  //   }, [])
-  // }
+  customers() {
+    return deliveries.reduce(function(arr, d){
+      arr.push d.customer();
+      return arr;
+    }, [])
+  }
 }
 
 class Meal {
